@@ -19,7 +19,7 @@ It bridges **NLP-based command parsing**, **G-code compilation**, and **hardware
 
 ⚙️ System Architecture
 
-The backend is composed of several independent services communicating through HTTP:
+The backend is composed of several independent services :
 
 | Service | Description |
 |----------|--------------|
