@@ -1,9 +1,14 @@
 # ALHS_Backend
 Backend software for the **Automated Laboratory Handling System (ALHS)**.  
-This project implements a **microservice-based backend architecture** designed for laboratory automation — integrating method parsing, G-code generation, and real-time hardware control through Klipper and Moonraker APIs.
+This backend adopts a **3D printer–derived control architecture** to enable modular and reproducible laboratory automation.  
+It integrates **FastAPI**, **Klipper**, **Moonraker**, and **GPT-based parsing** to automate experimental workflows end-to-end.
 
-The ALHS Backend provides a unified control layer between user-defined experiment methods and modular laboratory hardware.  
-It bridges **NLP-based command parsing**, **G-code compilation**, and **hardware actuation**, enabling reproducible and traceable automated workflows.
+The **ALHS Backend** provides a unified interface between user-defined experimental methods and modular laboratory hardware.  
+Inspired by the **3D printer motion control architecture**, this system applies the same principles of G-code–based actuation and firmware modularity to laboratory devices such as dispensers, mixers, and samplers.
+
+The backend serves as a bridge between:
+- **Human-readable experiment instructions** and  
+- **Machine-executable commands (G-code)**  
 
 📚 Documentation
 
