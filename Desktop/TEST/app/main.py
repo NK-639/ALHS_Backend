@@ -126,13 +126,8 @@ app.add_middleware(LoggingMiddleware)
 # 정적 파일 마운트
 # ========================================
 # static 폴더 경로 설정
-# Railway 배포 시: Root Directory가 /fastapi_shaker-project이고 app/ 폴더가 복사되면
-# static/ 폴더는 /app/static/에 있음 (app/main.py의 상위 디렉토리)
-# 로컬 개발 시: app/main.py에서 상위 디렉토리의 fastapi_shaker-project/static/ 참조
-static_dir = Path(__file__).parent.parent / "fastapi_shaker-project" / "static"
-# Railway 배포 환경에서는 static/ 폴더가 app/ 폴더와 같은 레벨에 있음
-if not static_dir.exists():
-    static_dir = Path(__file__).parent.parent / "static"
+# 프로젝트 루트의 static/ 폴더를 참조 (app/main.py의 상위 디렉토리)
+static_dir = Path(__file__).parent.parent / "static"
 if static_dir.exists():
     app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
     logger.info(f"📁 정적 파일 마운트: {static_dir}")
